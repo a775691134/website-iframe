@@ -32,8 +32,8 @@ jobs:
           node-version: 16
           # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
           token: ${{ secrets.ACCESS_TOKEN }}
-      - run: yarn
-      - run: yarn run build
+        - run: yarn
+        - run: yarn run build
 
       - name: GitHub Pages
         uses: crazy-max/ghaction-github-pages@v2.5.0
