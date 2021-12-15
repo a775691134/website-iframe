@@ -5,12 +5,12 @@ on:
       - master
 jobs:
     - name: Setup Node.js environment
-        uses: actions/setup-node@v2.5.0
-        with:
-          # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
-          node-version: 16
-          # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
-          token: ${{ secrets.ACCESS_TOKEN }}
+      uses: actions/setup-node@v2.5.0
+      with:
+        # Version Spec of the version to use.  Examples: 12.x, 10.15.1, >=10.15.0
+        node-version: 16
+        # Used to pull node distributions from node-versions.  Since there's a default, this is typically not supplied by the user.
+        token: ${{ secrets.ACCESS_TOKEN }}
       - run: yarn
       - run: yarn run build
 
