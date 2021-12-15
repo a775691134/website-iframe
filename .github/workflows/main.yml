@@ -31,11 +31,8 @@ jobs:
         node-version: ${{ matrix.node_version }}
 
     - name: Deploy
-      env:
+      uses: JamesIves/github-pages-deploy-action@releases/v3
+      with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: master
+        BRANCH: gh-pages
         FOLDER: build
-        BUILD_SCRIPT: npm install && npm run build
-      run: |
-        npm install
-        npm run build
