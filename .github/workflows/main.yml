@@ -7,14 +7,15 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: Checkout
-      uses: actions/checkout@master
+     - name: Install and Build
+        run: |
+          npm i
+          npm run build
 
-    - name: Build and Deploy
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@4.1.7
-
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-        BRANCH: gh-pages
-        FOLDER: build
+        accessToken: ${{ secrets.ACCESS_TOKEN }}
+        branch: gh-pages
+        folder: build
         BUILD_SCRIPT: npm install && npm run build
