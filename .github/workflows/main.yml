@@ -4,6 +4,10 @@ on:
     branches:
       - master
 jobs:
+    runs-on: ubuntu-latest
+    
+    steps:
+
     - name: Setup Node.js environment
       uses: actions/setup-node@v2.5.0
       with:
