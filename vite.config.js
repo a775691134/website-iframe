@@ -5,6 +5,7 @@ const { resolve } = require("path");
 // https://vitejs.dev/config/
 export default defineConfig({
   base: "/website-iframe/",
+  publicDir: "/website-iframe/",
   plugins: [vue()],
   css: {
     preprocessorOptions: {
