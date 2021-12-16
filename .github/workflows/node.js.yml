@@ -36,3 +36,5 @@ jobs:
       with:
         build_dir: dist
         # The committer name and email address
+      env:
+        GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
